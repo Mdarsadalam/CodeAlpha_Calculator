@@ -1,0 +1,181 @@
+
+
+:root {
+    --body-bg: #e8edf5;
+    --calculator-bg: #202938;
+    --display-bg: #111827;
+
+    --white: #ffffff;
+    --light-text: #8994a7;
+
+    --button-bg: #354154;
+    --button-hover: #4b5b72;
+
+    --special-bg: #59677d;
+    --special-text: #ffb28c;
+
+    --operator-bg: #f9580d;
+    --operator-hover: #dc4805;
+
+    --equal-bg: #36d466;
+    --equal-hover: #25b653;
+
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--body-bg);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.calculator {
+    width: 380px;
+    padding: 25px;
+    background: var(--calculator-bg);
+    border-radius: 22px;
+    box-shadow: 0 15px 35px var(--shadow);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    color: var(--white);
+}
+
+.header h2 {
+    font-size: 24px;
+}
+
+.header span {
+    color: var(--operator-bg);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.display {
+    min-height: 120px;
+    padding: 18px;
+    margin-bottom: 22px;
+    background: var(--display-bg);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: right;
+    overflow: hidden;
+}
+
+#previous {
+    min-height: 22px;
+    color: var(--light-text);
+    font-size: 17px;
+}
+
+#current {
+    color: var(--white);
+    font-size: 38px;
+    font-weight: bold;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+
+.buttons button {
+    height: 65px;
+    border: none;
+    border-radius: 14px;
+
+    background: var(--button-bg);
+    color: var(--white);
+
+    font-size: 23px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+.buttons button:active {
+    transform: scale(0.95);
+}
+.buttons .special {
+    background: var(--special-bg);
+    color: var(--special-text);
+}
+
+.buttons .special:hover {
+    background: #687991;
+}
+
+
+.buttons .operator {
+    background: var(--operator-bg);
+    color: var(--white);
+}
+
+.buttons .operator:hover {
+    background: var(--operator-hover);
+}
+
+
+.buttons .equal {
+    background: var(--equal-bg);
+    color: var(--white);
+}
+
+.buttons .equal:hover {
+    background: var(--equal-hover);
+}
+
+
+
+/* resonsive design for media screening */
+@media (max-width: 450px) {
+
+    .calculator {
+        width: 100%;
+        max-width: 380px;
+        padding: 18px;
+    }
+
+    .buttons {
+        gap: 9px;
+    }
+
+    .buttons button {
+        height: 58px;
+        font-size: 20px;
+    }
+
+    #current {
+        font-size: 32px;
+    }
+}
