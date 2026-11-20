@@ -36,3 +36,10 @@ While building this project, I learned how to use JavaScript functions, event li
 ## Internship
 
 CodeAlpha - Frontend Development Internship
+
+
+
+## Screenshot
+
+![Calculator Screenshot](CALCULATOR.PNG)
+
